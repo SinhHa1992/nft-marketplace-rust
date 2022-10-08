@@ -8,10 +8,6 @@ pub struct Token {
     pub owner_id: AccountId,
     pub approved_account_ids: HashMap<AccountId, U64>,
     pub next_approval_id: u64,
-    
-    // CUSTOM - fields
-    pub royalty: HashMap<AccountId, u32>,
-    pub token_type: Option<String>,
 }
 
 #[derive(Serialize, Deserialize)]
@@ -20,9 +16,5 @@ pub struct JsonToken {
     pub token_id: TokenId,
     pub owner_id: AccountId,
     pub metadata: TokenMetadata,
-    pub approved_account_ids: HashMap<AccountId, U64>,
-
-    // CUSTOM - fields
-    pub royalty: HashMap<AccountId, u32>,
-    pub token_type: Option<String>,
+    pub approved_account_ids: HashMap<AccountId, U64>
 }
